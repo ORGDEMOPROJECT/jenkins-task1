@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 properties([[$class: 'GithubProjectProperty', displayName: '', 
-             projectUrlStr: 'https://github.com/ORGDEMOPROJECT/jenkins-task1/'], 
+             projectUrlStr: 'https://github.com/ORGDEMOPROJECT/jenkins-task1.git'], 
             pipelineTriggers([upstream('jenkins-task7-2 ')])])
 pipeline {
     agent any
