@@ -4,9 +4,8 @@ properties([
 displayName: '',
 projectUrlStr: 'https://github.com/paddu315/central.git/'],
 pipelineTriggers([githubPush()])])
-properties([[$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/ORGDEMOPROJECT/'], 
-            pipelineTriggers([upstream('jenkins-task7-updownstream ')])])
-pipeline {
+properties([[$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/ORGDEMOPROJECT/'],
+            pipelineTriggers([upstream('jenkins-task7-1')])])
     agent any
     stages {
         stage('Build') {
