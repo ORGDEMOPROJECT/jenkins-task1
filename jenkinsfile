@@ -1,4 +1,5 @@
 #!/usr/bin/env groovy
+properties([[$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/ORGDEMOPROJECT/'], pipelineTriggers([upstream('jenkins-task7-downstream, ')])])
 properties([
 [$class: 'GithubProjectProperty',
 displayName: '',
