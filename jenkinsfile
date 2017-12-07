@@ -1,15 +1,12 @@
 #!/usr/bin/env groovy
-properties([[$class: 'GithubProjectProperty', displayName: '', 
-             projectUrlStr: 'https://github.com/ORGDEMOPROJECT/jenkins-task1/'], 
-            parameters([booleanParam(defaultValue: true, description: '', name: 'ENV '), 
-                        choice(choices: [''], description: '', name: ''), 
-                        string(defaultValue: 'master ', description: '', name: 'branch')])])
+properties([[$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/ORGDEMOPROJECT/jenkins-task1/'], 
+            parameters([booleanParam(defaultValue: true, description: 'should be false', name: 'param1')])])
 pipeline {
     agent any
     stages {
         stage('Build') {
             steps {
-                sh 'ls -l'
+                sh "echo paddu is ${params.param1}"
                 dir ('foo') {
                  writeFile file:'dummy', text:''
                  }
@@ -22,7 +19,7 @@ pipeline {
                  }
                  stage('Deploy') {
                   steps {
-                       echo 'Hello Padmini2'
+                       echo "paddu"
                        }
                       }
                      }
