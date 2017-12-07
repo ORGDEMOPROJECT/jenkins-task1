@@ -1,6 +1,7 @@
 #!/usr/bin/env groovy
-properties([[$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/ORGDEMOPROJECT/'], 
-            parameters([booleanParam(defaultValue: true, description: 'should be false', name: 'param1')])])
+properties([[$class: 'GithubProjectProperty', displayName: '', 
+             projectUrlStr: 'https://github.com/ORGDEMOPROJECT/jenkins-task1/'], 
+            pipelineTriggers([upstream('jenkins-task7-2 ')])])
 pipeline {
     agent any
     stages {
