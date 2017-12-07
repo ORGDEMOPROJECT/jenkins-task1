@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 properties([[$class: 'GithubProjectProperty', displayName: '', 
-             projectUrlStr: 'https://github.com/ORGDEMOPROJECT/'], 
+             projectUrlStr: 'https://github.com/ORGDEMOPROJECT/jenkins-task1/'], 
             parameters([booleanParam(defaultValue: true, description: '', name: 'ENV '), 
                         choice(choices: [''], description: '', name: ''), 
                         string(defaultValue: 'master ', description: '', name: 'branch')])])
