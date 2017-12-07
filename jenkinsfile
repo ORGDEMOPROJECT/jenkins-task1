@@ -1,11 +1,7 @@
 #!/usr/bin/env groovy
-properties([
-[$class: 'GithubProjectProperty',
-displayName: '',
-projectUrlStr: 'https://github.com/paddu315/central.git/'],
-pipelineTriggers([githubPush()])])
 properties([[$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/ORGDEMOPROJECT/'],
             pipelineTriggers([upstream('jenkins-task7-1')])])
+pipeline {
     agent any
     stages {
         stage('Build') {
