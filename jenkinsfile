@@ -1,8 +1,8 @@
 #!/usr/bin/env groovy
-pipeline {
-            properties([parameters([booleanParam(defaultValue: false, description: '', name: 'rebuild-task '), 
+properties([parameters([booleanParam(defaultValue: false, description: '', name: 'rebuild-task '), 
                                     choice(choices: ['integration '], description: '', 
                                     name: 'environment '), string(defaultValue: '', description: '', name: 'branch ')])])
+pipeline {
     agent any
     stages {
         stage('Build') {
