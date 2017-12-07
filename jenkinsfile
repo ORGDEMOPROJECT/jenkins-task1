@@ -1,9 +1,4 @@
 #!/usr/bin/env groovy
-properties([
-[$class: 'GithubProjectProperty',
-displayName: '',
-projectUrlStr: 'https://github.com/paddu315/central/'],
-pipelineTriggers([githubPush()])])
 pipeline {
     agent any
     stages {
