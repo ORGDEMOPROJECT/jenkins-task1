@@ -1,7 +1,9 @@
 #!/usr/bin/env groovy
-properties([parameters([booleanParam(defaultValue: false, description: '', name: 'rebuild-task '), 
-                                    choice(choices: ['integration '], description: '', 
-                                    name: 'environment '), string(defaultValue: '', description: '', name: 'branch ')])])
+properties([[$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/ORGDEMOPROJECT/'], 
+            parameters([booleanParam(defaultValue: true, description: '', name: 'padmini-1'), 
+                        choice(choices: ['name', 'place ', 'animal '], description: '', name: 'padmini-2'), 
+                        string(defaultValue: 'branch', description: '', name: 'padmini3')])])
+
 pipeline {
     agent any
     stages {
